@@ -22,5 +22,4 @@ You can submit it in the Issues tab
 <br>
 
 ## TL:DR:
-<br>
 Game made by a small team for the 2023 Github Game-Off Game Jam

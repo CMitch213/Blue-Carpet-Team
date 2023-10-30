@@ -11,8 +11,6 @@ You can submit it in the Issues tab
 <br>
 
 ## KNOWN ISSUES
-<br>
-
 ##### Known
 <br>
 

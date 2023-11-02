@@ -26,9 +26,12 @@ public class PlayerMovement : MonoBehaviour
     [Header("Keybindings")]
     public KeyCode jumpInput = KeyCode.Space;
     public KeyCode sprintInput = KeyCode.LeftShift;
+    public KeyCode pauseInput = KeyCode.Escape;
 
     [Header("Everything Else")]
     public Transform orientation;
+    public GameObject pauseMenu;
+    public bool isPaused;
 
     float xInput, zInput;
 
@@ -63,6 +66,11 @@ public class PlayerMovement : MonoBehaviour
         else if(Input.GetKeyUp(sprintInput)) //if (!Input.GetKeyDown(sprintInput))
         {
             speed = walkSpeed;
+        }
+
+        if (Input.GetKeyDown(pauseInput))
+        {
+            Pause();
         }
     }
 
@@ -130,5 +138,19 @@ public class PlayerMovement : MonoBehaviour
     private void ResetJump()
     {
         canJump = false;
+    }
+
+    void Pause()
+    {
+        if (isPaused)
+        {
+            pauseMenu.SetActive(false);
+            isPaused = false;
+        }
+        else if (isPaused == false)
+        {
+            pauseMenu.SetActive(true);
+            isPaused = true;
+        }
     }
 }

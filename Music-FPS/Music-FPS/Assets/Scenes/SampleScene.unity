@@ -262,7 +262,7 @@ MonoBehaviour:
   airMulti: 0.6
   canJump: 1
   jumpInput: 32
-  sprintInput: 306
+  sprintInput: 304
   orientation: {fileID: 171269404}
 --- !u!1 &705507993
 GameObject:
@@ -815,7 +815,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 08fa98b246e466a4b8d781db3e6d343b, type: 2}
+  - {fileID: 2100000, guid: b4e81869bafe818409d6a3ed4c94b235, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

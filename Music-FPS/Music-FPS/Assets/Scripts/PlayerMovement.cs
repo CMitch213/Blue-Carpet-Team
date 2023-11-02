@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     //Set Inputs for the Movement
-    private void MyInput()
+    private void GetInput()
     {
         xInput = Input.GetAxisRaw("Horizontal"); /*Left and Right*/
         zInput = Input.GetAxisRaw("Vertical");  /*Forwards and Backwards*/
@@ -56,11 +56,11 @@ public class PlayerMovement : MonoBehaviour
             //Invoke(nameof(ResetJump), jumpCooldown);
         }
 
-        while (Input.GetKeyDown(sprintInput))
+        if (Input.GetKeyDown(sprintInput))
         {
             speed = sprintSpeed;
         }
-        if (!Input.GetKeyDown(sprintInput))
+        else if(Input.GetKeyUp(sprintInput)) //if (!Input.GetKeyDown(sprintInput))
         {
             speed = walkSpeed;
         }
@@ -93,10 +93,10 @@ public class PlayerMovement : MonoBehaviour
         }
         if (rb.velocity.x < (speed * -1))
         {
-            rb.velocity = new Vector3(speed, rb.velocity.y, rb.velocity.z);
+            rb.velocity = new Vector3((speed * -1), rb.velocity.y, rb.velocity.z);
         }
 
-        MyInput();
+        GetInput();
     }
 
     private void FixedUpdate()

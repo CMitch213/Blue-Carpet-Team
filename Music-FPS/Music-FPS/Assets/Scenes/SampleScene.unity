@@ -668,6 +668,8 @@ MonoBehaviour:
   xSens: 500
   ySens: 500
   orientation: {fileID: 171269404}
+  cam: {fileID: 963194227}
+  fov: 60
 --- !u!1 &1058634912
 GameObject:
   m_ObjectHideFlags: 0

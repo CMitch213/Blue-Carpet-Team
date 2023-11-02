@@ -13,11 +13,13 @@ public class CameraMovement : MonoBehaviour
     float yRot;
 
     public Transform orientation;
+    public Camera cam;
+    public float fov;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        cam.fieldOfView = fov;
     }
 
     // Update is called once per frame
@@ -32,6 +34,15 @@ public class CameraMovement : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            cam.fieldOfView = fov * 0.75f;
+        }
+        if (Input.GetMouseButtonUp(1))
+        {
+            cam.fieldOfView = fov;
         }
 
         //Get Mouse Input

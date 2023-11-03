@@ -1,6 +1,6 @@
 # Blue-Carpet-Team
 ### This was made for the 2023 Github Game-Off Game Jam
-#### Game Version 0.0.0
+#### Game Version 0.1.0
 <br>
 
 ## Description

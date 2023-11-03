@@ -56,6 +56,10 @@
     <Compile Include="Assets\Scripts\CameraHolder.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\Guns.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Trumpet.cs" />
+    <Compile Include="Assets\Scripts\Enemies\FollowAI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

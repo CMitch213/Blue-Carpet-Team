@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     public float walkSpeed;
     public float sprintSpeed;
 
-
     [Header("Ground Check")]
     public float height;
     public LayerMask groundMask;

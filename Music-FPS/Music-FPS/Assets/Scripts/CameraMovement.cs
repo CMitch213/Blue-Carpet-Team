@@ -13,16 +13,11 @@ public class CameraMovement : MonoBehaviour
     float yRot;
 
     public Transform orientation;
-
-    [Header("ADS")]
-    public Camera cam;
-    public float fov;
     public GameObject buttonCrossHair;
 
     // Start is called before the first frame update
     void Start()
     {
-        cam.fieldOfView = fov;
         buttonCrossHair.transform.localScale = new Vector3(4.0f, 4.0f, 4.0f);
     }
 
@@ -38,17 +33,6 @@ public class CameraMovement : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-        }
-
-        if (Input.GetMouseButtonDown(1))
-        {
-            cam.fieldOfView = fov * 0.75f;
-            buttonCrossHair.transform.localScale = new Vector3(3.0f, 3.0f, 3.0f);
-        }
-        if (Input.GetMouseButtonUp(1))
-        {
-            cam.fieldOfView = fov;
-            buttonCrossHair.transform.localScale = new Vector3(4.0f, 4.0f, 4.0f);
         }
 
         //Get Mouse Input

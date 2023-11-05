@@ -10,6 +10,7 @@ public class Guns : MonoBehaviour
     public float bulletForce;
     public float bulletCooldown;
     public float bulletTimer;
+    public AudioSource shootSound;
 
 
     [Header("Raycast Stuff")]
@@ -74,11 +75,13 @@ public class Guns : MonoBehaviour
         bulletTimer = 0f;
         canShoot = false;
         muzzleFlash.Play();
+        shootSound.Play();
         //Do I hit something?
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
         {   
             Debug.Log(hit.transform.name);
             Enemy enemy = hit.transform.GetComponent<Enemy>();
+            
             if(enemy != null)
             {
                 enemy.Damage(damage);

@@ -5,6 +5,7 @@ using UnityEngine;
 public class FluteSniper : Guns
 {
     public GameObject sniperScope;
+    public CameraMovement cameraMove;
 
     // Start is called before the first frame update
     private void Start()
@@ -35,6 +36,8 @@ public class FluteSniper : Guns
         {
             cam.fieldOfView = fov * zoomScale;
             camMove.buttonCrossHair.transform.localScale = new Vector3(3.0f, 3.0f, 3.0f);
+            camMove.xSens = camMove.xSens / 5;
+            camMove.ySens = camMove.ySens / 5;
             sniperScope.SetActive(true);
         }
         if (Input.GetMouseButtonUp(1))
@@ -42,6 +45,8 @@ public class FluteSniper : Guns
             cam.fieldOfView = fov;
             camMove.buttonCrossHair.transform.localScale = new Vector3(4.0f, 4.0f, 4.0f);
             sniperScope.SetActive(false);
+            camMove.xSens = camMove.xSens * 5;
+            camMove.ySens = camMove.ySens * 5;
         }
     }
 }

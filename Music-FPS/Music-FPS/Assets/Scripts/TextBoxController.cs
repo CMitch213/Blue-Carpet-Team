@@ -39,7 +39,7 @@ public class TextBoxController : MonoBehaviour
             //That is why the X scale of the text is set to -1.
             textMesh.transform.LookAt(lookAtObject.transform.position);
             textMesh.transform.position = textBoxPos;
-            textMesh.transform.localScale = new Vector3(-1, 1, 1); //Unmirror text
+            textMesh.transform.localScale = new Vector3(-0.25f, 0.25f, 0.25f); //Unmirror text
             textMesh.text = this.text;
         }        
     }

@@ -19,6 +19,8 @@ public class CameraMovement : MonoBehaviour
     void Start()
     {
         buttonCrossHair.transform.localScale = new Vector3(4.0f, 4.0f, 4.0f);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -29,7 +31,7 @@ public class CameraMovement : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
-        else
+        else if (Input.GetKeyUp(KeyCode.LeftAlt))
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;

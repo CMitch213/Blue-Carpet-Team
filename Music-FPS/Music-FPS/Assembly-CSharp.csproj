@@ -56,6 +56,7 @@
     <Compile Include="Assets\Scripts\Guns.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\WeaponSwitching.cs" />
+    <Compile Include="Assets\Scripts\FluteSniper.cs" />
     <Compile Include="Assets\Scripts\TextBoxController.cs" />
     <Compile Include="Assets\Scripts\Trumpet.cs" />
     <Compile Include="Assets\Scripts\CameraHolder.cs" />
@@ -64,7 +65,7 @@
     <Compile Include="Assets\Scripts\Enemies\FollowAI.cs" />
     <Compile Include="Assets\Scripts\ViolinAR.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\FluteSniper.cs" />
+    <Compile Include="Assets\Scripts\NavMeshFollow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

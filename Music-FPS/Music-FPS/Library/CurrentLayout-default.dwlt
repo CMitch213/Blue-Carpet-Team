@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 21
+  controlID: 17
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -397,9 +397,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 42fbfffffc450000184600001e46000052460000844600009c460000
+      m_SelectedIDs: 5e460000
+      m_LastClickedID: 18014
+      m_ExpandedIDs: 6e74feff18a6feff9eb6ffff42fbfffffc450000184600001e460000524600008446000088460000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -459,9 +459,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 28.673296, y: -6.5772185, z: 4.860966}
+    m_Target: {x: 1.8698466, y: 8.86354, z: -0.17469852}
     speed: 2
-    m_Value: {x: 28.673296, y: -6.5772185, z: 4.860966}
+    m_Value: {x: 1.8698466, y: 8.86354, z: -0.17469852}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -508,13 +508,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.12831335, y: -0.46391836, z: 0.068129286, w: -0.8737668}
+    m_Target: {x: -0.1094631, y: 0.16968766, z: -0.018774116, w: -0.9790618}
     speed: 2
-    m_Value: {x: -0.12832654, y: -0.46396604, z: 0.06813629, w: -0.8738566}
+    m_Value: {x: -0.10948005, y: 0.16971393, z: -0.018777022, w: -0.97921336}
   m_Size:
-    m_Target: 48.909325
+    m_Target: 0.29260498
     speed: 2
-    m_Value: 48.909325
+    m_Value: 0.29260498
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -602,22 +602,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Music/SoundEffects/Trumpet
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Music/SoundEffects/Trumpet
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Coopj\source\repos\Blue-Carpet-Team\Music-FPS\Music-FPS
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: d64a0000
-    m_LastClickedID: 19158
-    m_ExpandedIDs: 00000000da490000dc490000de490000e0490000e2490000e4490000e6490000e8490000ea490000ec490000ee490000f0490000f2490000f4490000f6490000f8490000fa490000104a0000d24a000000ca9a3b
+    m_SelectedIDs: e0490000
+    m_LastClickedID: 18912
+    m_ExpandedIDs: 00000000e0490000e2490000e4490000e6490000e8490000ea490000ec490000ee490000f0490000f2490000f4490000f6490000f8490000fa490000fc490000fe490000004a0000164a0000304a0000405000004650000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -645,7 +645,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000da490000dc490000de490000e0490000e2490000e4490000e6490000e8490000ea490000ec490000ee490000f0490000f2490000f4490000f6490000f8490000fa490000
+    m_ExpandedIDs: 00000000e0490000e2490000e4490000e6490000e8490000ea490000ec490000ee490000f0490000f2490000f4490000f6490000f8490000fa490000fc490000fe490000004a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -673,7 +673,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c623000000000000ca4a0000
+    m_ExpandedInstanceIDs: c6230000ca4a000000000000ac4a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

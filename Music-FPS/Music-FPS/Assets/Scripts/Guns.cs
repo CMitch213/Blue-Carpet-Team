@@ -67,7 +67,7 @@ public class Guns : MonoBehaviour
         }
     }
 
-    void Shoot()
+    public void Shoot()
     {
         //Where I hit
         RaycastHit hit;

@@ -29,14 +29,17 @@ public class WeaponSwitching : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha3) && transform.childCount >= 3 || Input.GetKeyDown(KeyCode.Keypad3) && transform.childCount >= 3)
         {
             selectedWeapon = 2;
+            SelectWeapon();
         }
         if (Input.GetKeyDown(KeyCode.Alpha4) && transform.childCount >= 4 || Input.GetKeyDown(KeyCode.Keypad4) && transform.childCount >= 4)
         {
             selectedWeapon = 3;
+            SelectWeapon();
         }
         if (Input.GetKeyDown(KeyCode.Alpha5) && transform.childCount >= 5 || Input.GetKeyDown(KeyCode.Keypad5) && transform.childCount >= 5)
         {
             selectedWeapon = 4;
+            SelectWeapon();
         }
     }
 

@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public float walkSpeed;
     public float sprintSpeed;
+    public float crouchSpeed;
+    public float crouchY;
+    public float startY;
 
     [Header("Ground Check")]
     public float height;
@@ -26,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     public KeyCode jumpInput = KeyCode.Space;
     public KeyCode sprintInput = KeyCode.LeftShift;
     public KeyCode pauseInput = KeyCode.Escape;
+    public KeyCode crouchKey = KeyCode.LeftControl;
 
     [Header("Everything Else")]
     public Transform orientation;
@@ -42,6 +46,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+
+        startY = transform.localScale.y;
     }
 
     //Set Inputs for the Movement
@@ -70,6 +76,18 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(pauseInput))
         {
             Pause();
+        }
+
+        if (Input.GetKeyDown(crouchKey))
+        {
+            transform.localScale = new Vector3(transform.localScale.x, crouchY, transform.localScale.z);
+            rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
+            speed = crouchSpeed;
+        }
+        if (Input.GetKeyUp(crouchKey))
+        {
+            transform.localScale = new Vector3(transform.localScale.x, startY, transform.localScale.z);
+            speed = walkSpeed;
         }
     }
 

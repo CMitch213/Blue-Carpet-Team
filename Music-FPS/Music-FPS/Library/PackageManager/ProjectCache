@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638347490693692451
-    m_Hash: 2030445481
+      ticks: 638350976369203773
+    m_Hash: 2580657406
   m_LockFileStatus:
     m_FilePath: C:/Users/Coopj/source/repos/Blue-Carpet-Team/Music-FPS/Music-FPS/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638347490693839716
-    m_Hash: 2060549627
+      ticks: 638350976369203773
+    m_Hash: 184229983
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:

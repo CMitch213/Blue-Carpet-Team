@@ -50,12 +50,12 @@ public class Guns : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             cam.fieldOfView = fov * zoomScale;
-            camMove.buttonCrossHair.transform.localScale = new Vector3(3.0f, 3.0f, 3.0f);
+            camMove.buttonCrossHair.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
         }
         if (Input.GetMouseButtonUp(1))
         {
             cam.fieldOfView = fov;
-            camMove.buttonCrossHair.transform.localScale = new Vector3(4.0f, 4.0f, 4.0f);
+            camMove.buttonCrossHair.transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
         }
     }
 

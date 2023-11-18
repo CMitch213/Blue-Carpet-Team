@@ -18,7 +18,7 @@ public class CameraMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        buttonCrossHair.transform.localScale = new Vector3(4.0f, 4.0f, 4.0f);
+        buttonCrossHair.transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }

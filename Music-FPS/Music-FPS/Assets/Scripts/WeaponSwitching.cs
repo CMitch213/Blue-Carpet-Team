@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WeaponSwitching : MonoBehaviour
 {
-
     public int selectedWeapon = 0;
     public Animator arms;
     PlayerControls controls;
@@ -66,6 +65,15 @@ public class WeaponSwitching : MonoBehaviour
             SelectWeapon();
         }
 
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f) // forward
+        {
+            NextWeapon();
+        }
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f) // backwards
+        {
+            PreviousWeapon();
+        }
+
         //Controller
 
         //Switch Weapons
@@ -79,37 +87,76 @@ public class WeaponSwitching : MonoBehaviour
         //Loop through each child of weapon switching
         foreach(Transform weapon in transform)
         {
-            //If you're on selected weapon
-            if(i == selectedWeapon)
+            if(weapon.childCount != 0)
             {
-                weapon.gameObject.SetActive(true);
+                //If you're on selected weapon
+                if (i == selectedWeapon)
+                {
+                    weapon.gameObject.SetActive(true);
+                    arms.SetInteger("WeaponSelected", selectedWeapon);
+                }
+                else
+                {
+                    weapon.gameObject.SetActive(false);
+                }
             }
             else
             {
                 weapon.gameObject.SetActive(false);
             }
+            if(weapon.childCount == 0 && i == selectedWeapon)
+            {
+                weapon.gameObject.SetActive(false);
+                arms.SetInteger("WeaponSelected", 7);
+            }
             i++;
         }
-        arms.SetInteger("WeaponSelected", selectedWeapon);
     }
 
     //Controller Methods
     void NextWeapon()
     {
         selectedWeapon += 1;
+        int i = 0;
+        foreach (Transform weapon in transform)
+        {
+            if(weapon.childCount == 0 && i == selectedWeapon)
+            {
+                selectedWeapon++;
+            }
+            if(weapon.childCount == 0)
+            {
+                arms.SetInteger("WeaponSelected", 7);
+            }
+            i++;
+        }
         SelectWeapon();
         if(selectedWeapon > transform.childCount)
         {
-            selectedWeapon = transform.childCount;
+            selectedWeapon = 0;
+            SelectWeapon();
+        }
+        if(selectedWeapon == transform.childCount)
+        {
+            arms.SetInteger("WeaponSelected", 7);
         }
     }
     void PreviousWeapon()
     {
         selectedWeapon -= 1;
-        SelectWeapon();
         if (selectedWeapon < 0)
         {
-            selectedWeapon = 0;
+            selectedWeapon = transform.childCount;
         }
+        int i = 0;
+        foreach (Transform weapon in transform)
+        {
+            if (weapon.childCount == 0 && i == selectedWeapon)
+            {
+                selectedWeapon--;
+            }
+            i++;
+        }
+        SelectWeapon();
     }
 }

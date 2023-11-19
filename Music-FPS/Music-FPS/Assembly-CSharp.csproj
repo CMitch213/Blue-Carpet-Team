@@ -62,8 +62,9 @@
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Tambourine.cs" />
     <Compile Include="Assets\Scripts\WeaponSwitching.cs" />
+    <Compile Include="Assets\Scripts\PickupScript.cs" />
     <Compile Include="Assets\Scripts\FluteSniper.cs" />
-    <Compile Include="Assets\Scripts\TextBoxController.cs" />
+    <Compile Include="Assets\Scripts\Utils\TextBoxController.cs" />
     <Compile Include="Assets\Scripts\Trumpet.cs" />
     <Compile Include="Assets\Scripts\CameraHolder.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
@@ -72,12 +73,12 @@
     <Compile Include="Assets\Scripts\Utils\ObjectDetection.cs" />
     <Compile Include="Assets\Scripts\RestartLevel.cs" />
     <Compile Include="Assets\Scripts\Missile.cs" />
+    <Compile Include="Assets\InputActions\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\Enemies\FollowAI.cs" />
     <Compile Include="Assets\Scripts\ViolinAR.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\TubaRPG.cs" />
-    <Compile Include="Assets\InputActions\PlayerControls.cs" />
-    <Compile Include="Assets\Scripts\PickupScript.cs" />
+    <Compile Include="Assets\Scripts\PickUpController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

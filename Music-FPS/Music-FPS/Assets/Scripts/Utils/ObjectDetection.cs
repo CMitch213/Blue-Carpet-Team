@@ -14,6 +14,7 @@ public class ObjectDetection : MonoBehaviour
     public GameObject textBoxObject;
     public GameObject playerOrientation;
     public Camera mainCamera;
+    public string Display;
 
     void Start()
     {
@@ -37,7 +38,7 @@ public class ObjectDetection : MonoBehaviour
             textBox.transform.SetParent(other.gameObject.transform);
 
             TextBoxController tbc = textBox.AddComponent<TextBoxController>();
-            tbc.setText("Hello world");
+            tbc.setText(Display);
             tbc.setLookAt(mainCamera.gameObject);
         }
     }

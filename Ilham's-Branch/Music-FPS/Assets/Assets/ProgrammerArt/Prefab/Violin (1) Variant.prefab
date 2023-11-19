@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3100126218152687064
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 579d28236fccafd479460b593c777542, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 579d28236fccafd479460b593c777542, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 326.67905
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 579d28236fccafd479460b593c777542, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 326.67905
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 579d28236fccafd479460b593c777542, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 326.67905
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 579d28236fccafd479460b593c777542, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.49331704
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 579d28236fccafd479460b593c777542, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.22019982
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 579d28236fccafd479460b593c777542, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.8592987
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 579d28236fccafd479460b593c777542, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.049936034
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 579d28236fccafd479460b593c777542, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.04522831
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 579d28236fccafd479460b593c777542, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.07232887
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 579d28236fccafd479460b593c777542, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.99510276
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 579d28236fccafd479460b593c777542, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -8.015
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 579d28236fccafd479460b593c777542, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -5.635
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 579d28236fccafd479460b593c777542, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 186.141
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 579d28236fccafd479460b593c777542, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e762d6279acd6d24190f85fffd403a50, type: 2}
+    - target: {fileID: 919132149155446097, guid: 579d28236fccafd479460b593c777542, type: 3}
+      propertyPath: m_Name
+      value: Violin (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 579d28236fccafd479460b593c777542, type: 3}
+--- !u!1 &2865614889300297865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 579d28236fccafd479460b593c777542, type: 3}
+  m_PrefabInstance: {fileID: 3100126218152687064}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8944473298317099962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2865614889300297865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dde4be0e4807254ab750a21fd014288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  range: 300
+  bulletForce: 40
+  bulletCooldown: 0.1
+  bulletTimer: 0
+  shootSound: {fileID: 0}
+  cam: {fileID: 0}
+  muzzleFlash: {fileID: 0}
+  hitLoc: {fileID: 2880899775127349221, guid: c9fe1dc48de6622498eefa100667fb21, type: 3}
+  bloodSplat: {fileID: 6418397286038779446, guid: 5ab490724420ccf4a96bd0d61d7c11d7, type: 3}
+  canShoot: 1
+  fov: 60
+  zoomScale: 0.65
+  camMove: {fileID: 0}

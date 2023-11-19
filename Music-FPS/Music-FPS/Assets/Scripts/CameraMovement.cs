@@ -8,6 +8,10 @@ public class CameraMovement : MonoBehaviour
     public float xSens;
     public float ySens;
 
+    //Controlle Sensitivity
+    public float controllerXSens;
+    public float controllerYSens;
+
     //Rotation of Camera
     float xRot;
     float yRot;
@@ -16,9 +20,14 @@ public class CameraMovement : MonoBehaviour
     public GameObject buttonCrossHair;
     public PlayerMovement player;
 
+    PlayerControls controls;
+    Vector2 yInputController;
+
     // Start is called before the first frame update
     void Start()
     {
+        controls = new PlayerControls();
+        controls.Gameplay.Enable();
         buttonCrossHair.transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -41,6 +50,8 @@ public class CameraMovement : MonoBehaviour
         //Get Mouse Input
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * xSens;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * ySens;
+        //Vector2 r = new Vector2(yInputController.x * controllerXSens, yInputController.y * controllerYSens);
+        //r.y = Mathf.Clamp(r.y, -70f, 70f);
         yRot += mouseX;
         xRot -= mouseY;
         xRot = Mathf.Clamp(xRot, -90f, 90f);
@@ -48,5 +59,14 @@ public class CameraMovement : MonoBehaviour
         //Rotate both Camera and Player
         transform.rotation = Quaternion.Euler(xRot, yRot, 0);
         orientation.rotation = Quaternion.Euler(0, yRot, 0);
+
+    }
+
+    private void FixedUpdate()
+    {
+        //Controller Look Around
+        //controls.Gameplay.Look.performed += ctx => yInputController += ctx.ReadValue<Vector2>();
+        yInputController += controls.Gameplay.Look.ReadValue<Vector2>();
+        //controls.Gameplay.Look.canceled += ctx => yInputController = Vector2.zero;
     }
 }

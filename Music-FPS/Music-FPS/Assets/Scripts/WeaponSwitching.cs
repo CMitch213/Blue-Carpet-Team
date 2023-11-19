@@ -7,10 +7,13 @@ public class WeaponSwitching : MonoBehaviour
 
     public int selectedWeapon = 0;
     public Animator arms;
+    PlayerControls controls;
 
     // Start is called before the first frame update
     void Start()
     {
+        controls = new PlayerControls();
+        controls.Gameplay.Enable();
         SelectWeapon();
     }
 
@@ -62,6 +65,12 @@ public class WeaponSwitching : MonoBehaviour
             selectedWeapon = 8;
             SelectWeapon();
         }
+
+        //Controller
+
+        //Switch Weapons
+        controls.Gameplay.WeaponUP.performed += ctx => NextWeapon();
+        controls.Gameplay.WeaponDOWN.performed += ctx => PreviousWeapon();
     }
 
     void SelectWeapon()
@@ -82,5 +91,25 @@ public class WeaponSwitching : MonoBehaviour
             i++;
         }
         arms.SetInteger("WeaponSelected", selectedWeapon);
+    }
+
+    //Controller Methods
+    void NextWeapon()
+    {
+        selectedWeapon += 1;
+        SelectWeapon();
+        if(selectedWeapon > transform.childCount)
+        {
+            selectedWeapon = transform.childCount;
+        }
+    }
+    void PreviousWeapon()
+    {
+        selectedWeapon -= 1;
+        SelectWeapon();
+        if (selectedWeapon < 0)
+        {
+            selectedWeapon = 0;
+        }
     }
 }

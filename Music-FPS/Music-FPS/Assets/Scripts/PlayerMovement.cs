@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float crouchSpeed;
     public float crouchY;
     public float startY;
+    PlayerControls controls;
 
     [Header("Ground Check")]
     public float height;
@@ -44,6 +46,8 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        controls = new PlayerControls();
+        controls.Gameplay.Enable();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
@@ -55,6 +59,8 @@ public class PlayerMovement : MonoBehaviour
     {
         xInput = Input.GetAxisRaw("Horizontal"); /*Left and Right*/
         zInput = Input.GetAxisRaw("Vertical");  /*Forwards and Backwards*/
+
+        //Mouse and Keyboard
 
         //Jump Input
         if (Input.GetKey(jumpInput) && canJump && isGrounded)
@@ -89,6 +95,26 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(transform.localScale.x, startY, transform.localScale.z);
             speed = walkSpeed;
         }
+
+        //Controller
+
+        //Jump
+        if(canJump && isGrounded)
+        {
+            controls.Gameplay.Jump.performed += ctx => Jump();
+            controls.Gameplay.Jump.canceled -= ctx => Jump();
+        }
+
+        //Sprint
+        controls.Gameplay.Sprint.performed += ctx => Sprint();
+        controls.Gameplay.Sprint.canceled += ctx => UnSprint();
+
+        //Pause
+        controls.Gameplay.Pause.performed += ctx => Pause();
+
+        //Crouch
+        controls.Gameplay.Crouch.performed += ctx => Crouch();
+        controls.Gameplay.Crouch.canceled += ctx => UnCrouch();
     }
 
     // Update is called once per frame
@@ -147,6 +173,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
+        //canJump = false;
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
@@ -169,5 +196,30 @@ public class PlayerMovement : MonoBehaviour
             pauseMenu.SetActive(true);
             isPaused = true;
         }
+    }
+
+    //Controller Methods
+
+    //Sprinting
+    void Sprint()
+    {
+        speed = sprintSpeed;
+    }
+    void UnSprint()
+    {
+        speed = walkSpeed;
+    }
+
+    //Crouching
+    void Crouch()
+    {
+        transform.localScale = new Vector3(transform.localScale.x, crouchY, transform.localScale.z);
+        rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
+        speed = crouchSpeed;
+    }
+    void UnCrouch()
+    {
+        transform.localScale = new Vector3(transform.localScale.x, startY, transform.localScale.z);
+        speed = walkSpeed;
     }
 }

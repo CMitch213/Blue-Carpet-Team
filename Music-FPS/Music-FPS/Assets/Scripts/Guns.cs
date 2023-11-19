@@ -12,6 +12,7 @@ public class Guns : MonoBehaviour
     public float bulletCooldown;
     public float bulletTimer;
     public AudioSource shootSound;
+    //public Animation recoil;
 
 
     [Header("Raycast Stuff")]
@@ -23,6 +24,7 @@ public class Guns : MonoBehaviour
     public GameObject bloodSplat;
     public bool canShoot = true;
     public Slider slider;
+    PlayerControls controls;
 
     [Header("ADS")]
     public float fov;
@@ -32,6 +34,7 @@ public class Guns : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        controls = new PlayerControls();
         cam.fieldOfView = fov;
     }
 
@@ -62,6 +65,18 @@ public class Guns : MonoBehaviour
             cam.fieldOfView = fov;
             camMove.buttonCrossHair.transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
         }
+
+        //Controller Input
+
+        //Shoot
+        if (canShoot)
+        {
+            controls.Gameplay.Shoot.performed += ctx => Shoot();
+        }
+
+        //ADS
+        controls.Gameplay.ADS.performed += ctx => ADS();
+        controls.Gameplay.ADS.canceled += ctx => UnADS();
     }
 
     private void FixedUpdate()
@@ -81,6 +96,7 @@ public class Guns : MonoBehaviour
         canShoot = false;
         muzzleFlash.Play();
         shootSound.Play();
+        //recoil.Play();
         //Do I hit something?
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, range))
         {   
@@ -103,5 +119,21 @@ public class Guns : MonoBehaviour
                 hit.rigidbody.AddForce(-hit.normal * bulletForce);
             }
         }
+        //recoil.Stop();
     }
+
+    //Controller Methods
+
+    //ADS
+    void ADS()
+    {
+        cam.fieldOfView = fov * zoomScale;
+        camMove.buttonCrossHair.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+    }
+    void UnADS()
+    {
+        cam.fieldOfView = fov;
+        camMove.buttonCrossHair.transform.localScale = new Vector3(2.0f, 2.0f, 2.0f);
+    }
+
 }

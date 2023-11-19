@@ -1,6 +1,6 @@
 # Blue-Carpet-Team
 ### This was made for the 2023 Github Game-Off Game Jam
-#### Game Version 0.1.0
+#### Game Version 0.4.1
 <br>
 
 ## Description
@@ -23,4 +23,4 @@ You can submit it in the Issues tab
 <br>
 
 ## TL:DR:
-Game made by a small team for the 2023 Github Game-Off Game Jam
+Game made by a small team for the 2023 Github Game-Off Game Jam that is being worked on past the jam.

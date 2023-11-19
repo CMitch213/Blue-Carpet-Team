@@ -14,6 +14,7 @@ public class CameraMovement : MonoBehaviour
 
     public Transform orientation;
     public GameObject buttonCrossHair;
+    public PlayerMovement player;
 
     // Start is called before the first frame update
     void Start()

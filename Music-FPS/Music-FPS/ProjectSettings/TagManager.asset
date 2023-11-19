@@ -7,6 +7,7 @@ TagManager:
   - pyramid
   - plane
   - item
+  - Enemy
   layers:
   - Default
   - TransparentFX

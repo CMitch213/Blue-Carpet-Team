@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Everything Else")]
     public Transform orientation;
     public GameObject pauseMenu;
-    public bool isPaused;
+    public bool isPaused = false;
 
     float xInput, zInput;
 

@@ -30,6 +30,8 @@ public class FluteSniper : Guns
         {
             Shoot();
         }
+        slider.maxValue = bulletCooldown;
+        slider.value = bulletTimer;
 
         //ADS
         if (Input.GetMouseButtonDown(1))

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Guns : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class Guns : MonoBehaviour
     public GameObject hitLoc;
     public GameObject bloodSplat;
     public bool canShoot = true;
+    public Slider slider;
 
     [Header("ADS")]
     public float fov;
@@ -45,6 +47,9 @@ public class Guns : MonoBehaviour
         {
             Shoot();
         }
+
+        slider.maxValue = bulletCooldown;
+        slider.value = bulletTimer;
 
         //ADS
         if (Input.GetMouseButtonDown(1))

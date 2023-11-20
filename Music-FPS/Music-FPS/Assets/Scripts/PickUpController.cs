@@ -18,6 +18,9 @@ public class PickUpController : MonoBehaviour
 
     private void Start()
     {
+        equipped = false;
+        slotFull = false;
+
         //Setup
         if (!equipped)
         {

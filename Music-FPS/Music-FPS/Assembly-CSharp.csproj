@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\WeaponSwitching.cs" />
     <Compile Include="Assets\Scripts\PickupScript.cs" />
     <Compile Include="Assets\Scripts\FluteSniper.cs" />
+    <Compile Include="Assets\Scripts\PickUpController.cs" />
     <Compile Include="Assets\Scripts\Utils\TextBoxController.cs" />
     <Compile Include="Assets\Scripts\Trumpet.cs" />
     <Compile Include="Assets\Scripts\CameraHolder.cs" />
@@ -78,7 +79,6 @@
     <Compile Include="Assets\Scripts\ViolinAR.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\TubaRPG.cs" />
-    <Compile Include="Assets\Scripts\PickUpController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

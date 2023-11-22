@@ -57,6 +57,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Assets\UI\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Mic.cs" />
     <Compile Include="Assets\Scripts\Guns.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
@@ -77,7 +78,9 @@
     <Compile Include="Assets\InputActions\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\Enemies\FollowAI.cs" />
     <Compile Include="Assets\Scripts\ViolinAR.cs" />
+    <Compile Include="Assets\Assets\UI\Scripts\SettingsMenu.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Assets\UI\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\TubaRPG.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -97,6 +100,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Assets\UI\Fonts\Poppins\OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />

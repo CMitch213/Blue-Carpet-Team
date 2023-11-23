@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638360051021187721
-    m_Hash: 679966632
+      ticks: 638362177741163109
+    m_Hash: 4003574011
   m_LockFileStatus:
     m_FilePath: C:/Users/Coopj/source/repos/Blue-Carpet-Team/Music-FPS/Music-FPS/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638360051021237685
-    m_Hash: 285368581
+      ticks: 638362177741203143
+    m_Hash: 2419026928
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -3391,6 +3391,7 @@ m_ResolvedPackages:
     - 1.8.8
     - 1.8.9
     - 1.8.10
+    - 1.8.11
     compatible:
     - 1.6.6
     - 1.7.0-pre.1
@@ -3410,6 +3411,7 @@ m_ResolvedPackages:
     - 1.8.8
     - 1.8.9
     - 1.8.10
+    - 1.8.11
     verified: 1.6.6
   dependencies:
   - name: com.unity.mathematics

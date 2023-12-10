@@ -8,6 +8,9 @@ TagManager:
   - plane
   - item
   - Enemy
+  - Trumpet
+  - Tambourine
+  - Microphone
   layers:
   - Default
   - TransparentFX
